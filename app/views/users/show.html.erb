@@ -1,0 +1,16 @@
+<%= gravatar_for @user %>
+<%= @user.name %>
+<% if @user.id == @current_user.id %>
+<%=link_to("編集","#{@user.id}/edit") %>
+<%=link_to("削除","#{@user.id}/destroy", {method: "post"}) %>
+<% end %>
+    <ul class="user-tabs">
+      <li class="active"><%= link_to("投稿", "/users/#{@user.id}") %></li>
+      <li><%= link_to("いいね!", "/users/#{@user.id}/likes") %></li>
+    </ul>
+    
+    <% @user.posts.each do |post| %>
+    　<div class="posts-index-item">
+      　<%= link_to(post.content, "/posts/#{post.id}") %>
+      </div>
+    <% end %>

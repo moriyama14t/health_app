@@ -1,0 +1,20 @@
+<h1>
+ <%= gravatar_for @user %>
+ <%= link_to(@user.name, "/users/#{@user.id}") %>
+</h1>
+<%= @post.content %>
+<%=link_to("編集","#{@post.id}/edit") %>
+<%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+
+<% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
+   <%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %>
+      <span class="fa fa-heart like-btn-unlike"></span>
+   <% end %>
+<% else %>
+   <%= link_to("/likes/#{@post.id}/create", {method: "post"}) do %>
+      <span class="fa fa-heart like-btn"></span>
+   <% end %>
+<% end %>
+<%= @likes_count %>
+
+

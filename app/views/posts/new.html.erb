@@ -1,0 +1,6 @@
+<div class="col-md-4 offset-md-4 text-center pt-5">
+   <%=form_tag("/posts") do %>
+     <textarea name="content"><%= @post.content %></textarea>
+     <input type="submit" value="投稿する">
+   <% end %>
+</div>

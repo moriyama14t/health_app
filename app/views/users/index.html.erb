@@ -1,0 +1,6 @@
+<% @users.each do |user| %>
+  <div class="posts-index-item">
+    <%= gravatar_for user %>
+    <%= link_to(user.name, "/users/#{user.id}") %>
+  </div>
+<% end %>

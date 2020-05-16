@@ -1,0 +1,59 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.body {
+    background: #000;
+    font-family: "Nico Moji", sans-serif;
+}
+
+.column {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    flex-direction:column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+   .info {
+        margin-bottom: 10%;
+    }
+
+.cat1 {
+    background: url(https://www.pakutaso.com/shared/img/thumb/161007-180_TP_V.jpg) no-repeat top center;
+    background-size: cover;
+    position: relative;
+    opacity: 1.0;
+    color: #fff;
+    font-weight: bold;
+}
+.cat2 {
+  
+}
+
+
+@media screen and (min-width:700px) { 
+    /*　画面サイズが700pxからはここを読み込む　*/
+}
+@media screen and (min-width:701px)  {
+    /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+     .wrapper {
+    display: flex;
+  }
+}
+
+.h1 {
+    position: absolute;
+    width: 100%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
+    height: 1.5em;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+
+    /*位置の設定　- 上下中央寄せ*/
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}

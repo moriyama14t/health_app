@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ヘルRepo</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  </head>
+
+  <body>
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+   <div class="header">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+      <h5 class="my-0 mr-md-auto font-weight-normal"><%= link_to "ヘルRepo", root_path, id: "logo", :style=>"color:black;" %></h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+       <% if @current_user %>
+        <a class="p-2 text-dark" ><%= link_to "ユーザー一覧",   users_path, :style=>"color:black;" %></a>
+        <a class="p-2 text-dark" ><%= link_to "投稿一覧",   posts_path, :style=>"color:black;" %></a>
+        <a class="p-2 text-dark" ><%= link_to "投稿",   new_path, :style=>"color:black;" %></a>
+        <a class="p-2 text-dark" ><%= link_to(@current_user.name, "/users/#{@current_user.id}") %>さん</a>
+        <a class="p-2 text-dark" ><%= link_to("ログアウト", "/logout", method: :delete) %></a>
+       <% else %>
+        <a class="p-2 text-dark" ><%= link_to "登録",   signup_path, :style=>"color:black;" %></a>
+        <a class="p-2 text-dark" ><%= link_to "ログイン",   login_path, :style=>"color:black;" %></a>
+        <a class="p-2 text-dark" ><%= link_to "テストログイン", "/test/login", :style=>"color:#C0C0C0;" %></a>
+       <% end%>
+      </nav>
+    </div>
+   </div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+    <%= debug(params) if Rails.env.development? %>
+  </body>
+
+</html>

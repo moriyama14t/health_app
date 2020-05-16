@@ -1,0 +1,14 @@
+<div class="col-md-4 offset-md-4 text-center pt-5">
+   <% if @error_message %>
+    <div class="form-error">
+     <%= @error_message %>
+    </div>
+   <% end %>
+   <%= form_tag("/login") do %>
+     <p>メールアドレス</p>
+     <input name="email"value="test@test.com">
+     <p>パスワード</p>
+     <input type="password" name="password"value="1234">
+     <input type="submit" value="ログイン">
+   <% end %>
+</div>

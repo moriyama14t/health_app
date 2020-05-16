@@ -1,0 +1,11 @@
+<div class="col-md-4 offset-md-4 text-center pt-5">
+   <%= form_tag("/users/#{@user.id}") do %>
+     <p>ユーザー名</p>
+     <input name="name" value="<%= @user.name %>">
+     <p>メールアドレス</p>
+     <input name="email"value="<%= @user.email %>">
+     <p>パスワード</p>
+     <input type="password" name="password" value="<%= @user.password %>">
+     <input type="submit" value="編集">
+   <% end %>
+</div>
