@@ -1,29 +1,19 @@
-<<<<<<< HEAD
-# README
+#  ポートフォリオ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[へるレポ](https://health-report.herokuapp.com/)
 
-Things you may want to cover:
+RubyonRailsを用いたSNS
 
-* Ruby version
+## 機能一覧
+*  ユーザー登録機能
+*  ログイン機能
+*  ログアウト機能
+*  ユーザー編集機能
+*  ユーザー削除機能
 
-* System dependencies
+## 技術一覧
+*  プログラミング言語：Ruby
+*  フレームワーク：RubyonRails
+*  データベース：SQLite3
+*  インフラ：heroku 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-=======
-# health_app
->>>>>>> origin/master
-# health_app
