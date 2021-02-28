@@ -1,7 +1,5 @@
 #  ポートフォリオ
 
-[へるレポ](https://health-report.herokuapp.com/)
-
 RubyonRailsを用いたSNS
 
 ## 機能一覧
